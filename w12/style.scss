@@ -61,6 +61,14 @@ ul {
   }
 }
 
+.menu-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  z-index: 2;
+  display: none;
+}
 /*showcase*/
 .showcase {
   width: 100%;
@@ -174,8 +182,118 @@ ul {
   }
 }
 
-@media (max-width: 700px) {
+.follow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 3rem 0 3rem;
 
+  * {
+    margin-right: 1rem;
+  }
+}
+
+.links {
+  background: #f2f2f2;
+  color: #616161;
+  font-size: 1.2rem;
+  padding: 3.5rem 0;
+
+  .links-inner {
+    max-width:110rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    
+    grid-gap: 1rem;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  li {
+    line-height: 2.8;
+  }
+}
+
+.footer {
+  background: #f2f2f2;
+  color: #616161;
+  font-size: 1.2rem;
+  padding: 2rem 0;
+
+  .footer-inner {
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 0 2rem 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+
+      i {
+        margin-right: 1rem;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        margin-right: 3rem;
+        margin-bottom: 2rem;
+      }
+    }
+}
+
+@media (max-width: 700px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .menu-btn:hover{
+    
+  }
+
+  .main-nav {
+    ul.main-menu {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100vh;
+      background: #f2f2f2;
+      transform: translateX(-2rem);
+      opacity: 0.9;
+      padding: 2rem;
+      transform: translateX(-50rem);
+      transition: transform 0.5s ease-in-out;
+
+      s.show {
+        transform: translateX(-2rem);
+      } 
+
+      li {
+        padding: 0.8rem;
+        border-bottom: #ccc solid 1px;
+        font-size: 1.2rem;
+      }
+
+      li:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    ul.right-menu {
+      margin-right: 4rem;
+    }
+  }
   .btn {
     padding: 0.7rem 0.9rem;
     font-size: 0.9rem;
@@ -196,6 +314,11 @@ ul {
         margin-bottom: 2rem;
       }
     }
+  }
+
+  .links .links-inner {
+    grid-template-columns: repeat(2, 1fr);
+    
   }
 }
 
@@ -220,6 +343,13 @@ ul {
       }
     }
   }
-
+  .carbon_dark {
+    .content {
+      width: 70%;
+      p {
+        display: none;
+      }
+    }
+  }
 
 }
